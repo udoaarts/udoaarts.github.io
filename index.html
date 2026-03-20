@@ -13,8 +13,9 @@
         /* Default Light Mode Variables */
         :root {
             --bg-color: #ffffff;
-            --text-color: #333333;
-            --border-color: #eeeeee;
+            --text-color: #222222;
+            --text-muted: #555555;
+            --border-color: #222222;
             --link-color: #0066cc;
         }
 
@@ -23,8 +24,9 @@
             :root {
                 --bg-color: #121212;
                 --text-color: #e0e0e0;
-                --border-color: #333333;
-                --link-color: #66b3ff; /* A slightly brighter blue for dark backgrounds */
+                --text-muted: #a0a0a0;
+                --border-color: #e0e0e0;
+                --link-color: #66b3ff;
             }
         }
 
@@ -33,41 +35,112 @@
             line-height: 1.6; 
             color: var(--text-color); 
             background-color: var(--bg-color);
-            max-width: 600px; 
-            margin: 100px auto; 
-            padding: 20px; 
-            text-align: center; 
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition if they switch device themes */
+            max-width: 800px; /* CV Document Width */
+            margin: 80px auto; 
+            padding: 30px; 
+            transition: background-color 0.3s, color 0.3s; 
         }
-        
+
+        /* CV Header Formatting */
+        header {
+            margin-bottom: 50px;
+        }
+
         h1 { 
+            font-size: 2.8rem;
             font-weight: 700; 
-            border-bottom: 2px solid var(--border-color); 
-            padding-bottom: 10px; 
+            margin: 0 0 5px 0;
+            letter-spacing: -0.02em;
         }
-        
-        .contact { 
-            margin-top: 30px; 
-            font-weight: bold; 
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin: 0 0 10px 0;
+            font-weight: 700;
         }
-        
-        a { 
-            color: var(--link-color); 
-            text-decoration: none; 
+
+        .contact-info {
+            font-size: 1rem;
+            color: var(--text-muted);
         }
-        
-        a:hover { 
+
+        .contact-info a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover { 
             text-decoration: underline; 
+        }
+
+        /* Formal CV Section Headers */
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        /* "Coming Soon" formatted as a CV Entry */
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        .entry-date {
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .entry-content {
+            margin-top: 10px;
+        }
+        
+        .entry-content p {
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Peter I. Monos</h1>
-    <p>Graduate Structural Engineer</p>
-    <p>Currently building a new digital home for my portfolio and structural projects. Check back soon.</p>
-    
-    <div class="contact">
-        <p>In the meantime, feel free to reach out via <a href="mailto:contact@petermonos.uk">Email</a>.</p>
-    </div>
+
+    <header>
+        <h1>Peter I. Monos</h1>
+        <p class="subtitle">MEng Structural Engineering and Architecture Graduate</p>
+        <div class="contact-info">
+            <a href="mailto:contact@petermonos.uk">contact@petermonos.uk</a> &nbsp;|&nbsp; +44 7502 906458
+        </div>
+    </header>
+
+    <section>
+        <h2>Current Status</h2>
+        
+        <div class="entry-header">
+            <p class="entry-title">Digital Portfolio Construction</p>
+            <span class="entry-date">Expected 2026</span>
+        </div>
+        
+        <div class="entry-content">
+            <p>I am currently developing a new digital home for my structural engineering and architecture portfolio.</p>
+            <p>This site will soon feature detailed case studies, highlighting my work with BIM coordination, advanced structural analysis, and sustainable design workflows.</p>
+            <p>In the meantime, please feel free to reach out via email for inquiries or to request a full copy of my CV.</p>
+        </div>
+    </section>
+
 </body>
 </html>
