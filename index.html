@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter I. Monos | Structural Engineer</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Default Light Mode Variables */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --border-color: #eeeeee;
+            --link-color: #0066cc;
+        }
+
+        /* Automatic Dark Mode Detection */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #121212;
+                --text-color: #e0e0e0;
+                --border-color: #333333;
+                --link-color: #66b3ff; /* A slightly brighter blue for dark backgrounds */
+            }
+        }
+
+        body { 
+            font-family: 'Atkinson Hyperlegible', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-color); 
+            background-color: var(--bg-color);
+            max-width: 600px; 
+            margin: 100px auto; 
+            padding: 20px; 
+            text-align: center; 
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition if they switch device themes */
+        }
+        
+        h1 { 
+            font-weight: 700; 
+            border-bottom: 2px solid var(--border-color); 
+            padding-bottom: 10px; 
+        }
+        
+        .contact { 
+            margin-top: 30px; 
+            font-weight: bold; 
+        }
+        
+        a { 
+            color: var(--link-color); 
+            text-decoration: none; 
+        }
+        
+        a:hover { 
+            text-decoration: underline; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Peter I. Monos</h1>
+    <p>Graduate Structural Engineer</p>
+    <p>Currently building a new digital home for my portfolio and structural projects. Check back soon.</p>
+    
+    <div class="contact">
+        <p>In the meantime, feel free to reach out via <a href="mailto:contact@petermonos.uk">Email</a>.</p>
+    </div>
+</body>
+</html>
