@@ -52,25 +52,30 @@
             position: relative;
         }
 
-        /* The Toggle Button Styling */
+        /* The Toggle Button Styling - Updated for Icon Only */
         .theme-toggle {
             position: absolute;
-            top: 20px;
+            top: 25px;
             right: 30px;
             background-color: var(--btn-bg);
             color: var(--text-color);
             border: 1px solid var(--btn-border);
-            padding: 6px 12px;
-            border-radius: 4px;
+            padding: 8px;
+            border-radius: 6px;
             cursor: pointer;
-            font-family: inherit;
-            font-size: 0.9rem;
-            font-weight: 700;
-            transition: opacity 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s, background-color 0.2s;
         }
 
         .theme-toggle:hover {
             opacity: 0.7;
+        }
+        
+        .theme-toggle svg {
+            width: 18px;
+            height: 18px;
         }
 
         /* CV Header Formatting */
@@ -152,7 +157,7 @@
         /* Mobile adjustments */
         @media (max-width: 600px) {
             .theme-toggle {
-                top: 10px;
+                top: 15px;
                 right: 15px;
             }
             body { margin: 40px auto; padding: 20px; }
@@ -161,7 +166,11 @@
 </head>
 <body>
 
-    <button class="theme-toggle" id="themeToggle">🌓 Toggle Theme</button>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
 
     <header>
         <h1>Peter I. Monos</h1>
